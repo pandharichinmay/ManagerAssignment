@@ -1,0 +1,15 @@
+Employee Table: 
+
+CREATE TABLE `employee` (
+  `empId` int(11) NOT NULL,
+  `idManager` int(11) DEFAULT NULL,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `address` varchar(45) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `mobile` varchar(45) DEFAULT NULL,
+  `city` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`empId`),
+  KEY `idManager_idx` (`idManager`),
+  CONSTRAINT `idManagerFK` FOREIGN KEY (`idManager`) REFERENCES `manager` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1

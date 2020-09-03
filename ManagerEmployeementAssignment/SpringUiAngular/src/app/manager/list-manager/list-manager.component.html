@@ -1,0 +1,33 @@
+<p>list-manager works!</p>
+<div class="col-md-6 manager-container">
+    <h2 style="margin: auto"> manager Details</h2>
+    <button class="btn btn-danger" style="width:100px" (click)="addManager()"> Add manager</button>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Email ID</th>
+        <th>Password</th>
+        <th>FullName</th>
+        <th>LastName</th>
+        <th>Address</th>
+        <th>Dob</th>
+        <th>Company</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let manager of managers">
+        <td class="hidden"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><button class="btn btn-success" (click)="deleteManager(manager)"> Delete</button>
+          <button class="btn btn-success" (click)="editManager(manager)" style="margin-left: 20px;"> Edit</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
